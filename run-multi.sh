@@ -39,6 +39,7 @@ macos_homebrew_tools () {
 
 linux_gnu_tools () {
     # install tooling if not installed, via apt
+    sudo bash -c 'apt-get update -y >/dev/null 2>$1 & disown'
     sudo bash -c 'apt-get -y install cmatrix >/dev/null 2>&1 & disown'
     clear
 }
